@@ -1,67 +1,135 @@
-# CroquemADAme - YouNiverse : guiding manual to become famous
-***
-## Abstract
-Becoming famous on the youtube platform is the dream of many small youtubers, but the youtube rules may be difficult to follow. We would want to create a guideline for every starting youtuber. What is the perfect length of the video, how long does it take to have a buzz video, what tags to use, what are the best contents/categories, what is the best period to post etc.
 
-## Table of Contents
-1. [Research Questions](#research-questions)
-2. [Additional Datasets](#additional-datasets)
-3. [Methods](#methods)
-4. [Proposed Timeline](#proposed-timeline)
-5. [Organization within the team](#organization-within-the-team)
-6. [Questions for TAs](#questions-for-tas)
+readme.ipynb_
+CroquemADAme - YouNiverse : guiding manual to become famous
+Abstract
 
-## Research qestions
-***
-Write down a list of research questions you would like to address during the project.
+Nowadays, becoming a youtuber is accesible to anyone with a smartphone and an internet connection. Growing into a successfull person on this platform is therefore the dream of many begginers. However, it's not as easy as it seems. With the emergence of many users, it has become more and more difficult to make your own place. Therefore, we would like to create a guideline for every starting youtuber. Evaluate the perfect length of a video, what tags to use, the best contents/categories, the best period to post, the perfect title to attract etc. To allow them to focus on the right parameters to succeed on Youtube.
+Table of Contents
 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+    Research Questions
+    Methods
+    Proposed Timeline
+    Organization within the team
+    Questions for TAs
 
-## Additional Dataset
-***
-List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+Research qestions
 
-## Methods
-***
-A little intro about the installation. 
-```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
-```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
+    How to become famous on Youtube ?
+    What is the perfect video to post to have the more views ?
+    Does the title/ category/ length of video/ tags/ date of upload/ frequency of upload plays a role on becoming famous?
+    If so what are best parameters?
+    Does the parameters change among a category ?
+    Is there a parameter that has more effect than the others ?
 
-## Proposed Timeline
-***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
+Methods
+1. Data Storage
+2. Data processing
 
-## Organization within the team
-***
+    Keeping youtuber that grew up a lot from 2015 to 2019 :
+
+We will use youtubers that correspond to the following criterias: <10.000 subscribers in 2015 >1.000.000 subscribers in 2019
+
+    Search for the buzzing video
+
+On this filtered dataset, the goal is to analyze their “buzzing” videos. To do so, we keep youtubers that had in their youtube career a strong “slope” of their channel subscribers (we can use delta_subs from time_series dataset). For each youtuber we assign a “buzzing date” were the delta_sub is the highest. We are now left with youtubers that unexpectedly buzzed.
+
+    Extracting buzzing videos
+
+We extract their “buzzing” videos, by looking at their videos 2 months preceding the buzzing date. We keep all of those videos in a dataset and we should be left with a considerable amount of buzzing videos from different youtubers that are now famous.
+3. Analysis of the data
+
+    Comparison of the parameters of most viewed video and less viewed
+
+Now we will create pairs comparing the videos of a same youtuber. For example if a youtuber uploaded 3 videos during the period preceeding the buzz date, we will have a dataframe as follows:
+channel 	winning_video 	views1 	losing_video 	views2
+channel_a 	video1 	500.000 	video2 	10.000
+channel_a 	video3 	1.000.000 	video1 	500.000
+channel_a 	video3 	1.000.000 	video2 	10.000
+
+We create a table with the parameters of the loosing and winning videosand we do some t-test on the parameters (duration of the video,the number of tags etc) to see if their is an effect on those parameters for the winning videos and loosing videos.
+channel 	winning_video 	views1 	losing_video 	views2 	duration1 	duration2
+channel_a 	video1 	500.000 	video2 	10.000 	680 	500
+channel_a 	video3 	1.000.000 	video1 	500.000 	720 	560
+channel_a 	video3 	1.000.000 	video2 	10.000 	700 	490
+channel_b 	video1 	600.000 	video2 	20.000 	650 	470
+channel_b 	video3 	1.200.000 	video1 	600.000 	710 	530
+channel_b 	video3 	1.200.000 	video2 	20.000 	730 	500
+
+Histogram of the uploaded date of the buzzing video
+
+Histogram of the tags used
+
+What parameter has the strongest effect?
+
+    Detailed analysis on the title
+
+We will create a data set with the information on the title:
+channel 	winning_video 	views1 	losing_video 	views2 	Length1 	length2 	Capital Letter1 	Capital Letter2 	Number1 	Number2 	Feat1 	Feat2
+channel_a 	video1 	500.000 	video2 	10.000 	680 	500 	1 	1 	1 	0 	1 	0
+channel_a 	video3 	1.000.000 	video1 	500.000 	720 	560 	1 	0 	0 	1 	0 	0
+channel_a 	video3 	1.000.000 	video2 	10.000 	700 	490 	0 	0 	1 	1 	0 	0
+
+Length : the number of words use in the title
+
+Capital Letter : If their is at least one word (with at least 3 letters) in capital letter ->1
+
+Number : If there is at least one number in the title -> 1
+
+Feat : We create a dictionnary of words use when the video is in collaboration is another youtuber('feat', 'colab', 'with','ft','w/'...) if the title uses one of these words -> 1
+
+    Compilation of the best combination of parameters
+
+We will do ANOVA test to test the better combination of parameters
+
+    Analysis among categories
+
+We can do the same analysis as above but among each categories. This way a youtuber that to do gaming videos will have a personalize guideline.
+4. Visualization
+
+    Plot of a youtuber (an example) : evolution of deltasub, evolution of subscribers
+
+    Histogram of number of channel in function of the uploaded date of the buzzing video
+
+    Histogram of the uploaded date of the buzzing video
+
+    Histogram of the tags used
+
+    Categories :
+
+        Histogram of the number of successful channels per categories (in P2_preprocessing)
+
+        Histogram of the rate of successful channels in each categories (in P2_preprocessing)
+
+5. Github site building and Datastory redaction.
+Proposed Timeline
+
+18.11.22 P2 deadline
+
+22.11.22 Finish comparison analysis and Complete analysis among categories
+
+26.11.22 Anova testing
+
+28.11.22 Visualisation
+
+02.12.22 Homework 2 deadline
+
+06.12.22 Do the final analysis
+
+12.12.22 Begin of the redaction of the datastory
+
+15.12.22 Finish the code and visualisations
+
+20.12.22 Finish datastory
+
+23.12.22 Milestone 3 deadline
+Organization within the team
+
 A list of internal milestones up until project Milestone P3.
 
-## Questions for TAs
-***
-Add here any questions you have for us related to the proposed project.
-1. **This is a question in bold**
-Answer of the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer of the third question with *italic words*.
-4. **Fourth question in bold**
+    Ludovic : Data analysis (Comparison, Anova), visualisation
+    Margaux Z : Data story and web site building
+    Carolina : Data story and web site building
+    Margaux R : Data analysis (Title, categories), visualisation
 
-
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|-----------------------------|-----------------------------|-----------------------------|
-| text-align left             | text-align center           | text-align right            |
+Questions for TAs
+Produits payants Colab - Résilier les contrats ici
