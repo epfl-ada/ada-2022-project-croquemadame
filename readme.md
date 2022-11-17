@@ -140,15 +140,15 @@ We can do the same analysis as above but among each categories. This way a youtu
 
 * Categories : 
   
-  * Histogram of the number of channels per categories
+  * Histogram of the number of channels per categories (in <code>P2_preprocessing.ipynb</code>)
   
   <img src="nb_ch_per_cat.png" alt="nb_ch_per_cat" width="500"/>
 
-  * Histogram of the number of successful channels per categories (in P2_preprocessing)
+  * Histogram of the number of successful channels per categories (in <code>P2_preprocessing.ipynb</code>)
   
   <img src="Nb_sucess_ch_per_cat.png" alt="Nb_sucess_ch_per_cat" width="500"/>
   
-  * Histogram of the rate of successful channels in each categories (in P2_preprocessing)
+  * Histogram of the rate of successful channels in each categories (in <code>P2_preprocessing.ipynb</code>)
   
   <img src="rate_sucess_ch.png" alt="rate_sucess_ch" width="500"/>
   
