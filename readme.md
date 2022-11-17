@@ -122,11 +122,11 @@ Feat : We create a dictionnary of words use when the video is in collaboration i
 
 * **Compilation of the best combination of parameters**
 
-We will do ANOVA test to test the better combination of parameters 
+We will perform ANOVA tests to compute the best combination of parameters 
 
 * **Analysis among categories**
 
-We can do the same analysis as above but among each categories. This way a youtuber that to do gaming videos will have a personalize guideline.
+We can do the same analysis as above but among each categories. This way a youtuber that aims at posting gaming videos will have a personalized guideline.
 
 #### 4. Visualization 
 
