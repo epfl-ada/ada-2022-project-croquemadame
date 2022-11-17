@@ -23,8 +23,28 @@ Nowadays, becoming a youtuber is accesible to anyone with a smartphone and an in
 
 ## Methods
 ***
-#### 1. Data Storage 
 
+#### 1. Data Storage 
+In <code>P2_preprocessing.ipynb</code> the following datasets are imported from [YouNiverse](https://github.com/epfl-dlab/YouNiverse):
+- <code>df_channels_en.tsv.gz</code> (5,8 Mo)
+- <code>df_timeseries_en.tsv.gz</code> (557,7 Mo)
+- <code>_raw_yt_metadata.jsonl.zst</code> (14,3 Go)
+
+<code>df_channel</code> and <code>df_timeseries</code> are filtered following the first point of **2. Data processing** and saved to new less volumninous files:
+- <code>s_df_channels.tsv.zip</code> (134 Ko)
+- <code>s_df_timeseries.tsv.zip</code> (12,3 Mo)
+
+<code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and data before 2015 and after 2019 is filtered out. We save the new dataframe in 6 different parts of 10.000.000 videos each to have handleable files:
+- <code>_raw_yt_metadata#.tsv.zip</code> (~720 Mo)
+
+Each of the 6 files is filtered following the first point of **2. Data processing** as for <code>df_channels</code> and <code>df_timeseries</code> and save to new even smaller files:
+- <code>s_metadata#.tsv.zip</code> (~26 Mo)
+
+The 6 smaller files are grouped together to form one final file:
+
+- <code>s_df_metadata.tsv.zip</code> (178,9 Mo)
+
+We are making sure each final <code>s_df_file.tsv.zip</code> share the same channels.
 
 
 #### 2. Data processing 
