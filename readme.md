@@ -1,4 +1,4 @@
-# CroquemADAme - YouNiverse : guiding manual to become famous
+# CroquemADAme - YouNiverse : guiding manual to become famous on Youtube 
 ***
 ## Abstract
 Nowadays, becoming a youtuber is accesible to anyone with a smartphone and an internet connection. Growing into a successfull person on this platform is therefore the dream of many begginers. However, it's not as easy as it seems. With the emergence of many users, it has become more and more difficult to make your own place. Therefore, we would like to create a guideline for every starting youtuber. Evaluate the perfect length of a video, what tags to use, the best contents/categories, the best period to post, the perfect title to attract etc. To allow them to focus on the right parameters to succeed on Youtube. 
