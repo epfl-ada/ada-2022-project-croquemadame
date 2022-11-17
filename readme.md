@@ -73,8 +73,8 @@ We create a table with the parameters of the loosing and winning videosand we do
 
 Histogram of the uploaded date of the buzzing video
 
-![Nb_vd_per_month](Nb_vd_per_month.png)
-<img src="Nb_vd_per_month.png" alt="Nb_vd_per_month" width="200"/>
+
+<img src="Nb_vd_per_month.png" alt="Nb_vd_per_month" width="800"/>
 
 Histogram of the tags used 
 
