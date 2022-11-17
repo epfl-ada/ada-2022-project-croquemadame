@@ -30,14 +30,14 @@ In <code>P2_preprocessing.ipynb</code> the following datasets are imported from 
 - <code>df_timeseries_en.tsv.gz</code> (557,7 Mo)
 - <code>_raw_yt_metadata.jsonl.zst</code> (14,3 Go)
 
-<code>df_channel</code> and <code>df_timeseries</code> are filtered following the first point of **2. Data processing** and saved to new less volumninous files:
+<code>df_channel</code> and <code>df_timeseries</code> are filtered following the first point of [**2. Data processing**](https://github.com/epfl-ada/ada-2022-project-croquemadame#2-data-processing) and saved to new less volumninous files:
 - <code>s_df_channels.tsv.zip</code> (134 Ko)
 - <code>s_df_timeseries.tsv.zip</code> (12,3 Mo)
 
 <code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and data before 2015 and after 2019 is filtered out. We save the new dataframe in 6 different parts of 10.000.000 videos each to have handleable files:
 - <code>_raw_yt_metadata#.tsv.zip</code> (~720 Mo)
 
-Each of the 6 files is filtered following the first point of **2. Data processing** as for <code>df_channels</code> and <code>df_timeseries</code> and save to new even smaller files:
+Each of the 6 files is filtered following the first point of [**2. Data processing**](https://github.com/epfl-ada/ada-2022-project-croquemadame#2-data-processing) as for <code>df_channels</code> and <code>df_timeseries</code> and save to new even smaller files:
 - <code>s_metadata#.tsv.zip</code> (~26 Mo)
 
 The 6 smaller files are grouped together to form one final file:
