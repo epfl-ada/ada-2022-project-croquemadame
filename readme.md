@@ -187,4 +187,4 @@ A list of internal milestones up until project Milestone P3.
 
 ## Questions for TAs
 ***
-* Is it better to do a comparison test (t-test) on a sample with the most viewed video of each youtuber and a sample with the less viewed video ? Or is our AB_test good? 
+* Is it better to do a comparison test (t-test) on a sample with the most viewed video of each youtuber and a sample with the least viewed video ? Or is our AB_test good? 
