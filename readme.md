@@ -10,7 +10,7 @@ Nowadays, becoming a youtuber is accesible to anyone with a smartphone and an in
 4. [Organization within the team](#organization-within-the-team)
 5. [Questions for TAs](#questions-for-tas)
 
-## Research qestions
+## Research questions
 ***
 * How to become famous on Youtube ?
 * What is the perfect video to post to have the more views ? 
@@ -88,17 +88,17 @@ We create a table with the parameters of the loosing and winning videosand we do
 | channel_b | video3        | 1.200.000 | video1       | 600.000 |  710        |    530    |
 | channel_b | video3        | 1.200.000 | video2       | 20.000  |  730        |    500    |
 
+-> What parameter has the strongest effect?
 
 
-
-Histogram of the uploaded date of the buzzing video
+Histogram of the number of uploaded video per month 
 
 
 <img src="Nb_vd_per_month.png" alt="Nb_vd_per_month" width="650"/>
 
+
 Histogram of the tags used 
 
-What parameter has the strongest effect?
 
 * **Detailed analysis on the title** 
 
@@ -187,3 +187,4 @@ A list of internal milestones up until project Milestone P3.
 
 ## Questions for TAs
 ***
+* Is it better to do a comparison test (t-test) on a sample with the most viewed videos and a sample with the less viewed videos of our youtubers? Or is our AB_test in good? 
