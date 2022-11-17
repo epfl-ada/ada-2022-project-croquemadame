@@ -132,11 +132,7 @@ We can do the same analysis as above but among each categories. This way a youtu
 ***
 18.11.22 P2 deadline
 
-22.11.22 Finish comparison analysis and Complete analysis among categories
-
-26.11.22 Anova testing 
-
-28.11.22 Visualisation 
+- Small data analysis
 
 02.12.22 Homework 2 deadline
 
