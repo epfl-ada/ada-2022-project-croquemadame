@@ -72,7 +72,7 @@ We create a table with the parameters of the loosing and winning videosand we do
 
 
 Histogram of the uploaded date of the buzzing video
-! [Nb_vd_per_month] https://github.com/epfl-ada/ada-2022-project-croquemadame/blob/7a805f3319497b698ba8f8e5b153caaae8731b03/Nb_vd_per_month.png
+![Nb_vd_per_month] (https://github.com/epfl-ada/ada-2022-project-croquemadame/blob/7a805f3319497b698ba8f8e5b153caaae8731b03/Nb_vd_per_month.png)
 
 Histogram of the tags used 
 
