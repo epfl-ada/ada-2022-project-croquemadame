@@ -138,11 +138,11 @@ We can do the same analysis as above but among each categories. This way a youtu
 
 06.12.22 Do the final analysis
 
-12.12.22 Begin of the redaction of the datastory
+10.12.22 Begin of the redaction of the datastory
 
-15.12.22 Finish the code and visualisations 
+14.12.22 Finish the code and visualisations 
 
-20.12.22 Finish datastory
+19.12.22 Finish datastory
 
 23.12.22 Milestone 3 deadline
 
