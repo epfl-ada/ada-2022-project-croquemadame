@@ -1,0 +1,13 @@
+
+data/s_df_timeseries_en.tsv.zip
+.ipynb_checkpoints/P2-checkpoint.ipynb
+.ipynb_checkpoints/P2_preprocessing-checkpoint.ipynb
+.ipynb_checkpoints/Untitled-checkpoint.ipynb
+data/.DS_Store
+data/df_channels.tsv
+data/df_channels_en.tsv
+data/df_timeseries.tsv
+data/df_timeseries_en.tsv
+data/s_df_channels_en.tsv.zip
+data/s_df_metadata_en.tsv.zip
+new_preprocessing.ipynb
