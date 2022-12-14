@@ -11,3 +11,6 @@ data/df_timeseries_en.tsv
 data/s_df_channels_en.tsv.zip
 data/s_df_metadata_en.tsv.zip
 new_preprocessing.ipynb
+data/ent_channels_en.tsv.zip
+data/ent_metadata_en.tsv.zip
+data/ent_timeseries_en.tsv.zip
