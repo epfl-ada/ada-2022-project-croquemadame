@@ -1,8 +1,9 @@
 
-data/s_df_timeseries_en.tsv.zip
+
 .ipynb_checkpoints/P2-checkpoint.ipynb
 .ipynb_checkpoints/P2_preprocessing-checkpoint.ipynb
 .ipynb_checkpoints/Untitled-checkpoint.ipynb
+data/s_df_timeseries_en.tsv.zip
 data/.DS_Store
 data/df_channels.tsv
 data/df_channels_en.tsv
@@ -10,8 +11,11 @@ data/df_timeseries.tsv
 data/df_timeseries_en.tsv
 data/s_df_channels_en.tsv.zip
 data/s_df_metadata_en.tsv.zip
-new_preprocessing.ipynb
 data/ent_channels_en.tsv.zip
 data/ent_metadata_en.tsv.zip
 data/ent_timeseries_en.tsv.zip
 Untitled.ipynb
+data/_raw_yt_metadata.jsonl.zst
+data/df_channels_en.tsv.gz
+data/df_timeseries_en.tsv.gz
+data/metadata/_raw_yt_metadata0.tsv.zip
