@@ -18,3 +18,7 @@ data/df_timeseries_en.tsv.gz
 data/metadata/_raw_yt_metadata0.tsv.zip
 data/original_channels_en.tsv.gz
 data/original_timeseries_en.tsv.gz
+data/processed_timeseries.tsv.zip
+data/scored_channels.tsv.zip
+data/processed_timeseries.tsv.zip
+data/scored_channels.tsv.zip
