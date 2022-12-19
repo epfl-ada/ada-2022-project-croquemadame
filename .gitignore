@@ -16,3 +16,5 @@ new_preprocessing.ipynb
 data/df_channels_en.tsv.gz
 data/df_timeseries_en.tsv.gz
 data/metadata/_raw_yt_metadata0.tsv.zip
+data/original_channels_en.tsv.gz
+data/original_timeseries_en.tsv.gz
