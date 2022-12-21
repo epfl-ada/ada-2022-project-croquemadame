@@ -83,7 +83,7 @@ For each videos of each channel, we will compute the parameter analysis :
 Then we computed the mean of each channel of those parameters.
 
 We then obtained a dataset with the following columns :
-`mean_capital_title`,'mean_numwords','mean_feats','mean_duration','mean_numtags','mean_is_tags','week_freq','mean_first_person_singular','mean_first_person_plural','mean_second_person','mean_third_person_singular','mean_third_person_plural','mean_positive','mean_negative'
+`mean_capital_title`,`mean_numwords`,`mean_feats`,`mean_duration`,`mean_numtags`,`mean_is_tags`,`week_freq`,`mean_first_person_singular`,`mean_first_person_plural`,`mean_second_person`,`mean_third_person_singular`,`mean_third_person_plural`,`mean_positive`,`mean_negative`
 
 
 | channel   | mean_duration | mean_numwords| mean_capital_title | mean_feats | mean_numtags | mean_is_tags | week_freq | mean_positive | mean_negative | pronouns | has_buzzed |
@@ -108,37 +108,35 @@ We then obtained a dataset with the following columns :
   * Wordcloud of the most used words on the title 
 
 * **Analysis of the better period to post a video**
+  * Plot of the number of buzzing videos in function of the month of the year. 
+  * It will give an idea of interest of spectators in function of the period.
 
 
-<img src="Nb_vd_per_month.png" alt="Nb_vd_per_month" width="650"/>
-
+![image](images/Nb_vd_per_month.png)
 
 
 #### 4. Visualization 
 
+* Plot of the categories popularity
+
+![image](images/rate_sucess_ch.png)
+
 * Plot of a youtuber (an example) : evolution of delta_subs, evolution of subscribers 
 
-* Histogram of the number of channels in function of the upload_date of the buzzing video 
+* Plot of the features importances 
 
-* Histogram of the upload_date of the buzzing video
+* Boxplot of the parameters for buzzing and quiet channels 
 
-* Histogram of the tags used 
+* Plot of the topics in the title 
 
-* Categories : 
-  
-  * Histogram of the number of channels per categories (in <code>P2_preprocessing.ipynb</code>)
-  
-  <img src="nb_ch_per_cat.png" alt="nb_ch_per_cat" width="500"/>
+* Venn diagram of the most used topics for buzzing and quiet channels 
 
-  * Histogram of the number of successful channels per categories (in <code>P2_preprocessing.ipynb</code>)
-  
-  <img src="Nb_sucess_ch_per_cat.png" alt="Nb_sucess_ch_per_cat" width="500"/>
-  
-  * Histogram of the rate of successful channels in each category (in <code>P2_preprocessing.ipynb</code>)
-  
-  <img src="rate_sucess_ch.png" alt="rate_sucess_ch" width="500"/>
-  
-  
+* Plot of the most used tags 
+
+* Wordcloud of the most used words in title 
+
+* Histogram of the upload_date of the buzzing video in function of the months
+ 
 
 
 #### 5. GitHub site building and data story redaction.
