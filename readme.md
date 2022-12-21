@@ -63,67 +63,56 @@ We keep all these videos in a dataset, and we should be left with a considerable
 
 #### 3. Analysis of the data 
 
-* **Comparison of the parameters of most viewed video and less viewed** 
+* **Analysis among categories** 
+* We first looked at the most popular category which is entertaintment and we decided to focused on it 
 
-Now we will create pairs comparing the videos of a same YouTuber. For example, if a youtuber uploaded 3 videos during the period preceding the buzz date, we will have a DataFrame as follows:
+* **Comparison of the parameters of buzzing channels and quiet channels** 
 
+Now we have channels that evolve a lot and other that did not. We will name them as buzzing and quiet channels. 
+For each videos of each channel, we will compute the parameter analysis : 
+- calculate the number of words in the title
+- calculate number of tags 
+- calculate if there is tags
+- calculate if they used the lexical field of featuring in the title
+- calculate if they used capital letters in the title
+- calculate if they used pronouns(first person of singular, first person of plural, second person, third person of singular, third person of plural) in the title
+- calculate if they used positive or negative words in the title
+- The duration of the video
+- Calculate the week frequency of uploaded videos 
 
-| channel   | winning_video | views1    | losing_video | views2  |
-|-----------|---------------|-----------|--------------|---------|
-| channel_a | video1        | 500.000   | video2       | 10.000  |
-| channel_a | video3        | 1.000.000 | video1       | 500.000 |
-| channel_a | video3        | 1.000.000 | video2       | 10.000  |
+Then we computed the mean of each channel of those parameters.
 
-We create a table with the parameters of the losing and winning videos, and we do some t-tests on the parameters (duration of the video, number of tags, etc.) to see if there is an effect on those parameters for the winning videos and losing videos. 
-
-| channel   | winning_video | views1    | losing_video | views2  | duration1   | duration2 | 
-|-----------|---------------|-----------|--------------|---------|-------------|-----------|
-| channel_a | video1        | 500.000   | video2       | 10.000  |  680        |    500    |
-| channel_a | video3        | 1.000.000 | video1       | 500.000 |  720        |    560    |
-| channel_a | video3        | 1.000.000 | video2       | 10.000  |  700        |    490    |
-| channel_b | video1        | 600.000   | video2       | 20.000  |  650        |    470    |
-| channel_b | video3        | 1.200.000 | video1       | 600.000 |  710        |    530    |
-| channel_b | video3        | 1.200.000 | video2       | 20.000  |  730        |    500    |
-
--> Which parameter has the strongest effect?
+We then obtained a dataset with the following columns :
+mean_capital_title','mean_numwords','mean_feats','mean_duration','mean_numtags','mean_is_tags','week_freq','mean_first_person_singular','mean_first_person_plural','mean_second_person','mean_third_person_singular','mean_third_person_plural','mean_positive','mean_negative'
 
 
-Histogram of the number of uploaded videos per month 
+| channel   | mean_duration | mean_numwords| mean_capital_title | mean_feats | mean_numtags | mean_is_tags | week_freq | mean_positive | mean_negative | pronouns | has_buzzed |
+|-----------|---------------|--------------|--------------------|------------|--------------|--------------|-----------|---------------|---------------|---------|----------|
+| channel_a |    500        |     6        |       0.1          |    0.01    |     5        |     0.5      |    0.5    |       0.4     |     0.8       |    0.2    |    0    |
+| channel_b |    600        |     10       |       0.3          |    0.005   |     7        |     0.8      |     1.5   |       0.9     |     0.3       |   0.7    |    1    |
+| channel_c |    650        |     13       |       0.2          |    0.02    |     9        |     0.7      |      3    |       0.7     |     0.2       |    0.5    |    1    |
+
+
+* **Importance of features 
+
+* We will compute a random tree to see which feature is the most importance 
+* We will then compute t-test on each parameters to see wich one is significant for our analysis
+* We will also compute linear regression on the most important features 
+
+* **Analysis of the tags
+* Compute the most used tags for the buzzing and non buzing channels 
+
+* **Lexical analysis on the title** 
+* Analyse the topics for the title of buzzing channels and quiet ones 
+* Venn diagram of the 15 most used topics to see with ones are specific to the buzzing and quiet channels 
+* Wordcloud of the most used words on the title 
+
+* **Analysis of the better period to post a video**
 
 
 <img src="Nb_vd_per_month.png" alt="Nb_vd_per_month" width="650"/>
 
 
-Histogram of the tags used 
-
-
-* **Detailed analysis on the title** 
-
-We will create a data set with the information on the title: 
-
-| channel   | winning_video | views1    | losing_video | views2  | Length1   | length2 | Capital Letter1 |Capital Letter2 | Number1 | Number2 | Feat1 | Feat2 |
-|-----------|---------------|-----------|--------------|---------|-----------|---------|-----------------|----------------|---------|---------|-------|-------|
-| channel_a | video1        | 500.000   | video2       | 10.000  |  680      |    500  |       1         |       1         |   1     |   0     |    1  |    0  |
-| channel_a | video3        | 1.000.000 | video1       | 500.000 |  720      |    560  |       1         |       0         |   0     |   1     |    0  |    0  |
-| channel_a | video3        | 1.000.000 | video2       | 10.000  |  700      |    490  |       0         |       0         |   1     |   1     |    0  |    0  |
-
-Length : the number of words used in the title 
-
-Capital Letter : If there is at least one word (with at least 3 letters) written in capital letters ->1
-
-Number : If there is at least one number in the title -> 1
-
-Feat : We create a dictionary of words use when the video is in collaboration is another YouTuber ('feat', 'collab', 'with', 'ft', 'w/'...) if the title uses one of these words -> 1 
-
-
-
-* **Compilation of the best combination of parameters**
-
-We will perform ANOVA tests to compute the best combination of parameters.
-
-* **Analysis among categories**
-
-We can do the same analysis as above within each category. This way a youtuber that aims at posting gaming videos, for example, will have a personalized guideline.
 
 #### 4. Visualization 
 
