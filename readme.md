@@ -112,15 +112,14 @@ We then obtained a dataset with the following columns :
   * It will give an idea of interest of spectators in function of the period.
 
 
-<img src="Nb_vd_per_month.png" alt="Nb_vd_per_month" width="650"/>
-
+![image](images/Nb_vd_per_month.png)
 
 
 #### 4. Visualization 
 
 * Plot of the categories popularity
 
- <img src="rate_sucess_ch.png" alt="rate_sucess_ch" width="500"/>
+![image](images/rate_sucess_ch.png)
 
 * Plot of a youtuber (an example) : evolution of delta_subs, evolution of subscribers 
 
