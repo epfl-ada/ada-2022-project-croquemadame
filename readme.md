@@ -108,7 +108,7 @@ We then obtained a dataset with the following columns :
   * Wordcloud of the most used words on the title 
 
 * **Analysis of the better period to post a video**
-  * Plot of the number of views in function of the month of the year for the videos of buzzing videos. 
+  * Plot of the number of buzzing videos in function of the month of the year. 
   * It will give an idea of interest of spectators in function of the period.
 
 
