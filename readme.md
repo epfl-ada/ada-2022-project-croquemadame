@@ -64,7 +64,7 @@ We keep all these videos in a dataset, and we should be left with a considerable
 #### 3. Analysis of the data 
 
 * **Analysis among categories** 
-* We first looked at the most popular category which is entertaintment and we decided to focused on it 
+  * We first looked at the most popular category which is entertaintment and we decided to focused on it 
 
 * **Comparison of the parameters of buzzing channels and quiet channels** 
 
@@ -83,7 +83,7 @@ For each videos of each channel, we will compute the parameter analysis :
 Then we computed the mean of each channel of those parameters.
 
 We then obtained a dataset with the following columns :
-mean_capital_title','mean_numwords','mean_feats','mean_duration','mean_numtags','mean_is_tags','week_freq','mean_first_person_singular','mean_first_person_plural','mean_second_person','mean_third_person_singular','mean_third_person_plural','mean_positive','mean_negative'
+`mean_capital_title`,'mean_numwords','mean_feats','mean_duration','mean_numtags','mean_is_tags','week_freq','mean_first_person_singular','mean_first_person_plural','mean_second_person','mean_third_person_singular','mean_third_person_plural','mean_positive','mean_negative'
 
 
 | channel   | mean_duration | mean_numwords| mean_capital_title | mean_feats | mean_numtags | mean_is_tags | week_freq | mean_positive | mean_negative | pronouns | has_buzzed |
@@ -93,19 +93,19 @@ mean_capital_title','mean_numwords','mean_feats','mean_duration','mean_numtags',
 | channel_c |    650        |     13       |       0.2          |    0.02    |     9        |     0.7      |      3    |       0.7     |     0.2       |    0.5    |    1    |
 
 
-* **Importance of features 
+* **Importance of features**
 
-* We will compute a random tree to see which feature is the most importance 
-* We will then compute t-test on each parameters to see wich one is significant for our analysis
-* We will also compute linear regression on the most important features 
+  * We will compute a random tree to see which feature is the most importance 
+  * We will then compute t-test on each parameters to see wich one is significant for our analysis
+  * We will also compute linear regression on the most important features 
 
-* **Analysis of the tags
-* Compute the most used tags for the buzzing and non buzing channels 
+* **Analysis of the tags**
+  * Compute the most used tags for the buzzing and non buzing channels 
 
 * **Lexical analysis on the title** 
-* Analyse the topics for the title of buzzing channels and quiet ones 
-* Venn diagram of the 15 most used topics to see with ones are specific to the buzzing and quiet channels 
-* Wordcloud of the most used words on the title 
+  * Analyse the topics for the title of buzzing channels and quiet ones 
+  * Venn diagram of the 15 most used topics to see with ones are specific to the buzzing and quiet channels 
+  * Wordcloud of the most used words on the title 
 
 * **Analysis of the better period to post a video**
 
