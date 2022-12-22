@@ -1,4 +1,6 @@
 # CroquemADAme - YouNiverse : guiding manual to become famous on YouTube 
+
+**Website: [The Small YouTuber's Guide to Fame DataStory](https://zwierski.github.io/croquemADAme-datastory/)**
 ***
 ## Abstract
 Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an Internet connection. Growing into a successful person on this platform is therefore the dream of many. However, this is not as easy as it seems. With the emergence of many users, it has become increasingly difficult to make your own place. Therefore, we would like to create a guideline for small YouTubers (our analysis is focus on youtubers that started with 10k to 15k subscribers) - how to choose the perfect video duration, what tags to use, the best contents, the best period to post, the perfect title to attract new viewers, etc. - to allow them to focus on the actual content with the certainty that other objective parameters are potentiating the success. 
@@ -10,16 +12,16 @@ Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an I
 4. [Organization within the team](#organization-within-the-team)
 
 
-## Research questions
 ***
+## Research questions
 * How to grow fast on YouTube ?
 * What are the best objetive parameters of a video to improve performance ? 
 * Do the title / category / length of video / tags / date of upload / frequency of upload play a role on channel growth?
 * If so, what are most important parameters and their best values to improve channel growth? 
 * Is there a parameter that has significantly more effect than the others ? 
 
-## Methods
 ***
+## Methods
 
 #### 1. Data Storage 
 In <code>P2_preprocessing.ipynb</code> the following datasets are imported from [YouNiverse](https://github.com/epfl-dlab/YouNiverse):
@@ -63,6 +65,7 @@ To compare buzzing channels and quiet channels, we are selecting the 15% channel
 
 Now we have channels that evolve a lot and other that did not. We will name them as buzzing and quiet channels. 
 For each videos of each channel, we will compute the parameter analysis : 
+
 - calculate the number of words in the title
 - calculate number of tags 
 - calculate if there is tags
@@ -94,12 +97,13 @@ We then obtained a dataset with the following columns :
   * We will also compute the importance of the features related to the title only
 
 * **Analysis of the tags**
-  * Compute the most used tags for the buzzing and quiet channels 
+  * Compute the most used tags for each channel
+  * Compare the most used tags over all buzzing channels and to the most used tags over all quiet channels
+  * Use a wordcloud to see the most used tags for each group
 
 * **Lexical analysis on the title** 
   * Analyse the topics for the title of buzzing channels and quiet ones 
   * Venn diagram of the 15 most used topics to see with ones are specific to the buzzing and quiet channels 
-  * Wordcloud of the most used words on the title 
 
 * **Analysis of the better period to post a video**
   * Plot of the number of buzzing videos in function of the month of the year. 
@@ -107,23 +111,17 @@ We then obtained a dataset with the following columns :
 
 #### 4. Visualization 
 
-* Plot of the categories popularity
-
-![image](images/nb_ch_per_cat.png)
-
-* Plot of a youtuber (an example) : evolution of delta_subs, evolution of subscribers 
+* Example of a youtuber: plot evolution of subscribers and its videos features
 
 * Plot of the features importances 
 
 * Boxplot of the parameters for buzzing and quiet channels 
 
-* Plot of the topics in the title 
+* Plot of the most represented topics in the title 
 
 * Venn diagram of the most used topics for buzzing and quiet channels 
 
-* Plot of the most used tags 
-
-* Wordcloud of the most used words in title 
+* Wordcloud of the most used tags 
 
 * Histogram of the upload_date of the buzzing video in function of the months
  
@@ -131,32 +129,16 @@ We then obtained a dataset with the following columns :
 
 #### 5. GitHub site building and data story redaction.
 
+##### **The Small YouTuber's Guide to Fame DataStory**
 
+We will follow the journey of a small youtuber asking for advices and buzzing on YouTube : [Link to our website](https://zwierski.github.io/croquemADAme-datastory/)
 
-## Proposed Timeline
 ***
-18.11.22 P2 deadline
-
-- Small data analysis
-
-02.12.22 Homework 2 deadline
-
-06.12.22 Do the final analysis
-
-10.12.22 Begin of the redaction of the data story
-
-14.12.22 Finish the code and visualizations 
-
-19.12.22 Finish datastory
-
-23.12.22 Milestone 3 deadline
-
 ## Organization within the team
-***
 A list of internal milestones up until project Milestone P3.
-* Ludovic : Data analysis (Comparison, Anova), visualization
+* Ludovic : Preprocessing, Data analysis, web site building
 * Margaux Z : Data story and web site building 
 * Carolina : Data story and web site building
-* Margaux R : Data analysis (Title, categories), visualization
+* Margaux R : Data analysis, visualization, web site building
 
 
