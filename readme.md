@@ -91,10 +91,10 @@ We then obtained a dataset with the following columns :
   * We will compute a random tree to see which feature is the most importance 
   * We will then compute t-test on each parameters to see wich one is significant for our analysis
   * We will also compute linear regression on the most important features 
-  * We will also compute the importance of the features of the title 
+  * We will also compute the importance of the features related to the title only
 
 * **Analysis of the tags**
-  * Compute the most used tags for the buzzing and non buzing channels 
+  * Compute the most used tags for the buzzing and quiet channels 
 
 * **Lexical analysis on the title** 
   * Analyse the topics for the title of buzzing channels and quiet ones 
