@@ -111,10 +111,6 @@ We then obtained a dataset with the following columns :
   * Plot of the number of buzzing videos in function of the month of the year. 
   * It will give an idea of interest of spectators in function of the period.
 
-
-![image](images/Nb_vd_per_month.png)
-
-
 #### 4. Visualization 
 
 * Plot of the categories popularity
