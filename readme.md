@@ -8,7 +8,7 @@ Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an I
 2. [Methods](#methods)
 3. [Proposed Timeline](#proposed-timeline)
 4. [Organization within the team](#organization-within-the-team)
-5. [Questions for TAs](#questions-for-tas)
+
 
 ## Research questions
 ***
@@ -119,7 +119,7 @@ We then obtained a dataset with the following columns :
 
 * Plot of the categories popularity
 
-![image](images/rate_sucess_ch.png)
+![image](images/nb_ch_per_cat.png)
 
 * Plot of a youtuber (an example) : evolution of delta_subs, evolution of subscribers 
 
@@ -169,6 +169,4 @@ A list of internal milestones up until project Milestone P3.
 * Carolina : Data story and web site building
 * Margaux R : Data analysis (Title, categories), visualization
 
-## Questions for TAs
-***
-* Is it better to do a comparison test (t-test) on a sample with the most viewed video of each YouTuber and a sample with the least viewed video ? Or is our AB_test good?
+
