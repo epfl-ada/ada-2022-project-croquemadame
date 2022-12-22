@@ -28,43 +28,36 @@ In <code>P2_preprocessing.ipynb</code> the following datasets are imported from 
 - <code>_raw_yt_metadata.jsonl.zst</code> (14,3 Go)
 
 <code>df_channel</code> and <code>df_timeseries</code> are filtered following the first point of [**2. Data processing**](https://github.com/epfl-ada/ada-2022-project-croquemadame#2-data-processing) and saved to new less voluminous files:
-- <code>s_df_channels.tsv.zip</code> (134 Ko)
-- <code>s_df_timeseries.tsv.zip</code> (12,3 Mo)
+- <code>ent_channels.tsv.zip</code> (134 Ko)
+- <code>ent_timeseries.tsv.zip</code> (12,3 Mo)
 
-<code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and data from before 2015 and after 2019 is filtered out. We save the new DataFrame in 6 different parts of 10.000.000 videos each to have handleable files:
-- <code>_raw_yt_metadata#.tsv.zip</code> (~720 Mo)
-
-Each of the 6 files is filtered following the first point of [**2. Data processing**](https://github.com/epfl-ada/ada-2022-project-croquemadame#2-data-processing) as for <code>df_channels</code> and <code>df_timeseries</code> and save to new even smaller files:
-- <code>s_metadata#.tsv.zip</code> (~26 Mo)
+<code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and only channels in `s_df_channels` are kept. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
+- <code>ent_metadata#.tsv.zip</code> (~76 Mo)
 
 The 6 smaller files are grouped together to form one final file:
 
-- <code>s_df_metadata.tsv.zip</code> (178,9 Mo)
+- <code>ent_metadata.tsv.zip</code> (411,9 Mo)
 
-We are making sure each final <code>s_df_file.tsv.zip</code> share the same channels.
+We are making sure each final <code>ent_*file*.tsv.zip</code> share the same channels.
 
 
 #### 2. Data processing 
-* Keeping YouTubers that grew a lot from 2015 to 2019: 
+* **Focus en Entertainment category**
 
-We will use YouTubers that correspond to the following criteria:
-<10.000 subscribers in 2015 >1.000.000 subscribers in 2019
+For our analysis, we decided to focus on the "Entertainment" category as it is the one with the most channels. By doing so, we are making sure the channels target the same audience and share the same objectives.
 
-* Search for the buzzing video  
+* **Scoring each channel**
 
-On this filtered dataset, the goal is to analyze YouTubers’ “buzzing” videos.
-To do so, we keep YouTubers that had in their YouTube career a strong “slope” / rise of their channel subscribers (we can use delta_subs from the time_series dataset). For each YouTuber we assign a “buzzing date” where the delta_subs is the highest.
-We are now left with YouTubers that have unexpectedly buzzed.
+We are scoring each channel based on the number of subscribers it has and its date of creation. We are using the following formula to do so:
 
-* Extracting buzzing videos 
+$$\text{score} = \dfrac{\text{subs in 2019}}{\text{days since creation}}$$
 
-We extract their “buzzing” videos, by looking at their videos 2 months preceding the buzzing date.
-We keep all these videos in a dataset, and we should be left with a considerable amount of buzzing videos from different YouTubers that are now famous.
+* **Selecting channels according to their score**
+
+To compare buzzing channels and quiet channels, we are selecting the 15% channels with the highest score and the 15% channels with the lowest score. We are left with 2 groups of 3.300 channels and  around 5,7M videos which is enough for our analysis.
 
 #### 3. Analysis of the data 
 
-* **Analysis among categories** 
-  * We first looked at the most popular category which is entertaintment and we decided to focused on it 
 
 * **Comparison of the parameters of buzzing channels and quiet channels** 
 
