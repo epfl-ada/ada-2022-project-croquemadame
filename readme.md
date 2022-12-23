@@ -1,9 +1,14 @@
 # CroquemADAme - YouNiverse : guiding manual to become famous on YouTube 
 
+**Notebook: P3.ipynb inside the P3 folder**
+
 **Website: [The Small YouTuber's Guide to Fame DataStory](https://zwierski.github.io/croquemADAme-datastory/)**
+
+
+
 ***
 ## Abstract
-Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an Internet connection. Growing into a successful person on this platform is therefore the dream of many. However, this is not as easy as it seems. With the emergence of many users, it has become increasingly difficult to make your own place. Therefore, we would like to create a guideline for small YouTubers (our analysis is focus on youtubers that started with 10k to 15k subscribers) - how to choose the perfect video duration, what tags to use, the best contents, the best period to post, the perfect title to attract new viewers, etc. - to allow them to focus on the actual content with the certainty that other objective parameters are potentiating the success. 
+Nowadays, anyone with a smartphone and an Internet connection can become a YouTuber. Many beginners dream of success on the platform, with videos acclaimed by millions of subscribers. However, reaching fame is not as easy as it seems: indeed, with how much the number of creators has grown in the past years, it has become increasingly difficult to make an impact. The difference between famous and unknown YouTubers may lie in more than the quality of their videos. Are there any metrics in famous YouTubers' most viral videos - title, length, category, upload date - that set them apart from the rest? Could these metrics be used to create a guide for YouTubers who are starting out, and allow them to focus on the actual content with the certainty that other objective parameters are helping their success? 
 
 ## Table of Contents
 1. [Research Questions](#research-questions)
@@ -14,7 +19,7 @@ Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an I
 ***
 ## Research questions
 * How to grow on YouTube ?
-* What are the best objetive parameters of a video to improve performance ? 
+* What are the best objective parameters of a video to improve performance ? 
 * Do the title / category / length of video / tags / date of upload / frequency of upload play a role on channel growth?
 * If so, what are most important parameters and their best values to improve channel growth? 
 * Is there a parameter that has significantly more effect than the others ? 
@@ -72,6 +77,19 @@ A channel with 100k subscribers in 2019 and created in 2015 will have a score of
 * **Selecting channels according to their score**
 
 To compare buzzing channels and quiet channels, we are selecting the 15% channels with the highest score and the 15% channels with the lowest score. We are left with 2 groups of 3.300 channels and  around 5,7M videos which is enough for our analysis.
+
+* **Explanation of our different notebooks**
+
+In the file P3 we have : 
+
+<code>scoring_ent_channels_15p.ipynb</code>  : where we calculated the score of the channels and exported only the channels corresponding to our preprocessing mentioned before 
+
+<code>metadata_processing.ipynb</code>  : Where we read the metada and export the coresponding videos informations for the channels selected before. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
+- <code>ent_metadata#.tsv.zip</code> (~76 Mo)
+
+<code>concat_metadata.ipynb</code> : Where we concatenate the 6 metadata to form one file  
+
+<code>P3.ipynb</code> : where we have all our analysis 
 
 #### 3. Analysis of the data 
 
