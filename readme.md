@@ -3,7 +3,7 @@
 **Website: [The Small YouTuber's Guide to Fame DataStory](https://zwierski.github.io/croquemADAme-datastory/)**
 ***
 ## Abstract
-Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an Internet connection. Growing into a successful person on this platform is therefore the dream of many. However, this is not as easy as it seems. With the emergence of many users, it has become increasingly difficult to make your own place. Therefore, we would like to create a guideline for small YouTubers (our analysis is focus on youtubers that started with 10k to 15k subscribers) - how to choose the perfect video duration, what tags to use, the best contents, the best period to post, the perfect title to attract new viewers, etc. - to allow them to focus on the actual content with the certainty that other objective parameters are potentiating the success. 
+Nowadays, anyone with a smartphone and an Internet connection can become a YouTuber. Many beginners dream of success on the platform, with videos acclaimed by millions of subscribers. However, reaching fame is not as easy as it seems: indeed, with how much the number of creators has grown in the past years, it has become increasingly difficult to make an impact. The difference between famous and unknown YouTubers may lie in more than the quality of their videos. Are there any metrics in famous YouTubers' most viral videos - title, length, category, upload date - that set them apart from the rest? Could these metrics be used to create a guide for YouTubers who are starting out, and allow them to focus on the actual content with the certainty that other objective parameters are helping their success? 
 
 ## Table of Contents
 1. [Research Questions](#research-questions)
@@ -14,7 +14,7 @@ Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an I
 ***
 ## Research questions
 * How to grow on YouTube ?
-* What are the best objetive parameters of a video to improve performance ? 
+* What are the best objective parameters of a video to improve performance ? 
 * Do the title / category / length of video / tags / date of upload / frequency of upload play a role on channel growth?
 * If so, what are most important parameters and their best values to improve channel growth? 
 * Is there a parameter that has significantly more effect than the others ? 
