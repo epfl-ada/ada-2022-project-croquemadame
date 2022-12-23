@@ -28,7 +28,7 @@ Nowadays, anyone with a smartphone and an Internet connection can become a YouTu
 ## Methods
 
 #### 1. Data Storage 
-In <code>P2_preprocessing.ipynb</code> the following datasets are imported from [YouNiverse](https://github.com/epfl-dlab/YouNiverse):
+In <code>scoring_ent_channels_15p.ipynb</code> the following datasets are imported from [YouNiverse](https://github.com/epfl-dlab/YouNiverse):
 - <code>df_channels_en.tsv.gz</code> (5,8 Mo)
 - <code>df_timeseries_en.tsv.gz</code> (557,7 Mo)
 - <code>_raw_yt_metadata.jsonl.zst</code> (14,3 Go)
@@ -37,16 +37,27 @@ In <code>P2_preprocessing.ipynb</code> the following datasets are imported from 
 - <code>ent_channels.tsv.zip</code> (134 Ko)
 - <code>ent_timeseries.tsv.zip</code> (12,3 Mo)
 
-<code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and only channels in `s_df_channels` are kept. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
+In `metadata_processing` <code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and only channels in `s_df_channels` are kept. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
 - <code>ent_metadata#.tsv.zip</code> (~76 Mo)
 
-The 6 smaller files are grouped together to form one final file:
+The 6 smaller files are grouped together to form one final file in `concat_metadata.ipynb`:
 
 - <code>ent_metadata.tsv.zip</code> (411,9 Mo)
 
 We are making sure each final <code>ent_*file*.tsv.zip</code> share the same channels.
 
+* **Explanation of our different notebooks**
 
+In the file P3 we have : 
+
+<code>scoring_ent_channels_15p.ipynb</code>  : where we calculated the score of the channels and exported only the channels corresponding to our preprocessing mentioned before 
+
+<code>metadata_processing.ipynb</code>  : Where we read the metada and export the coresponding videos informations for the channels selected before. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
+- <code>ent_metadata#.tsv.zip</code> (~76 Mo)
+
+<code>concat_metadata.ipynb</code> : Where we concatenate the 6 metadata to form one file  
+
+<code>P3.ipynb</code> : where we have all our analysis 
 #### 2. Data processing 
 * **Focus en Entertainment category**
 
@@ -77,19 +88,6 @@ A channel with 100k subscribers in 2019 and created in 2015 will have a score of
 * **Selecting channels according to their score**
 
 To compare buzzing channels and quiet channels, we are selecting the 15% channels with the highest score and the 15% channels with the lowest score. We are left with 2 groups of 3.300 channels and  around 5,7M videos which is enough for our analysis.
-
-* **Explanation of our different notebooks**
-
-In the file P3 we have : 
-
-<code>scoring_ent_channels_15p.ipynb</code>  : where we calculated the score of the channels and exported only the channels corresponding to our preprocessing mentioned before 
-
-<code>metadata_processing.ipynb</code>  : Where we read the metada and export the coresponding videos informations for the channels selected before. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
-- <code>ent_metadata#.tsv.zip</code> (~76 Mo)
-
-<code>concat_metadata.ipynb</code> : Where we concatenate the 6 metadata to form one file  
-
-<code>P3.ipynb</code> : where we have all our analysis 
 
 #### 3. Analysis of the data 
 
