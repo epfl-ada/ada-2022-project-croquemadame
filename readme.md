@@ -37,7 +37,7 @@ In <code>scoring_ent_channels_15p.ipynb</code> the following datasets are import
 - <code>ent_channels.tsv.zip</code> (134 Ko)
 - <code>ent_timeseries.tsv.zip</code> (12,3 Mo)
 
-In `metadata_processing` <code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and only channels in `s_df_channels` are kept. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
+In `metadata_processing`, <code>_raw_yt_metadata</code> is decoded line by line using the <code>zstd</code> library and only channels in `s_df_channels` are kept. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
 - <code>ent_metadata#.tsv.zip</code> (~76 Mo)
 
 The 6 smaller files are grouped together to form one final file in `concat_metadata.ipynb`:
