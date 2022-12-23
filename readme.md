@@ -73,6 +73,19 @@ A channel with 100k subscribers in 2019 and created in 2015 will have a score of
 
 To compare buzzing channels and quiet channels, we are selecting the 15% channels with the highest score and the 15% channels with the lowest score. We are left with 2 groups of 3.300 channels and  around 5,7M videos which is enough for our analysis.
 
+* **Explanation of our different notebooks**
+
+In the file P3 we have : 
+
+<code>scoring_ent_channels_15p.ipynb</code>  : where we calculated the score of the channels and exported only the channels corresponding to our preprocessing mentioned before 
+
+<code>metadata_processing.ipynb</code>  : Where we read the metada and export the coresponding videos informations for the channels selected before. We save the new DataFrame in 6 different parts of 1.000.000 videos each to have handleable files:
+- <code>ent_metadata#.tsv.zip</code> (~76 Mo)
+
+<code>concat_metadata.ipynb</code> : Where we concatenate the 6 metadata to form one file  
+
+<code>P3.ipynb</code> : where we have all our analysis 
+
 #### 3. Analysis of the data 
 
 
