@@ -8,13 +8,12 @@ Nowadays, becoming a YouTuber is accessible to anyone with a smartphone and an I
 ## Table of Contents
 1. [Research Questions](#research-questions)
 2. [Methods](#methods)
-3. [Proposed Timeline](#proposed-timeline)
-4. [Organization within the team](#organization-within-the-team)
+3. [Organization within the team](#organization-within-the-team)
 
 
 ***
 ## Research questions
-* How to grow fast on YouTube ?
+* How to grow on YouTube ?
 * What are the best objetive parameters of a video to improve performance ? 
 * Do the title / category / length of video / tags / date of upload / frequency of upload play a role on channel growth?
 * If so, what are most important parameters and their best values to improve channel growth? 
@@ -50,9 +49,25 @@ For our analysis, we decided to focus on the "Entertainment" category as it is t
 
 * **Scoring each channel**
 
-We are scoring each channel based on the number of subscribers it has and its date of creation. We are using the following formula to do so:
+The goal of our analysis is to compare channels that are growing fast and channels that are not, to extract some features that could help us understand why some channels are more successful than others.
+
+In the previous versions of our analysis, we used many different methods to select our channels. 
+
+*Method 1* -
+At first we selected only channels that started with less than 10k subscribers, and finished with more than 500k, to ensure a important growth. We then compared their videos during their buzzing period and videos before they buzzed, to see if there was a difference in the parameters of the videos. This was unsatisfying as we did not provide any explanation for selection of the thresholds.
+
+*Method 2* -
+Then we tried to attribute a score to each channel, based on the number of subscribers it had at the beginning and at the end of their timeseries period. It turned out it was unsatisfying as well, as we found out that the timeseries dataset is not complete, and that we cannot base our analysis on it. For example, almost all channels start with a non-zero number of subscribers or views, falsifying our results.
+
+*Method 3* -
+Another method we tried is to attribute a growth-score based on the proportion of new subscribers a channel gain every week. We preselected channels created after 2015. We then selected the 25% top-scored and 25% bottom-scored channels. Still unsatisfying, as channels going from 10k to 12k in two timeseries weeksn will have a higher score than channels going from 5k to 20k in 8 weeks, even if the second channel has a better growth to analyse. Also because many data is missing in the timeseries dataset, many channels created in 2016 will have their timeseries period starting in 2019, and will have a very high score.
+
+*Final method* -
+Finally we decided not to use the timeseries dataset for the scoring of the channels. We are scoring each channel based on the number of subscribers it has in 2019, and its date of creation. We are using the following formula to do so:
 
 $$\text{score} = \dfrac{\text{subs in 2019}}{\text{days since creation}}$$
+
+A channel with 100k subscribers in 2019 and created in 2015 will have a score of 100k/1461 = 55, while a channel with 100k subscribers in 2019 and created in 2018 will have a score of 100k/365 = 273.
 
 * **Selecting channels according to their score**
 
@@ -136,9 +151,9 @@ We will follow the journey of a small youtuber asking for advices and buzzing on
 ***
 ## Organization within the team
 A list of internal milestones up until project Milestone P3.
-* Ludovic : Preprocessing, Data analysis, web site building
+* Ludovic : Preprocessing, Data analysis, data story & web site building
 * Margaux Z : Data story and web site building 
-* Carolina : Data story and web site building
-* Margaux R : Data analysis, visualization, web site building
+* Carolina : Data story
+* Margaux R : Data analysis, visualization, data story & web site building
 
 
